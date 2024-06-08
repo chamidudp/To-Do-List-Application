@@ -13,7 +13,11 @@ made ensuring API endpoints were properly validated and error-handled.
 Frontend Development:
 
 used JavaScript, CSS, and HTML to create a user interface.
-features to add new tasks, update current tasks, mark tasks as finished, and delete tasks have been implemented.
+
+- features to add new tasks, 
+- update current tasks, 
+- mark tasks as finished, 
+- delete tasks have been implemented.
 
 used AJAX to establish a connection with the backend.
 
