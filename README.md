@@ -87,13 +87,16 @@ DB_HOST=localhost
 DB_USER=yourUsername
 DB_PASSWORD=yourPassword
 DB_NAME=todo_app
+```
 5. Run the Server
-Start the server by running:
+```
 node server.js
 ```
 
 6. Open the Application
 Open your browser and navigate to  ``` http://localhost:3000 ```  to view the application.
+
+
 
 
 ## Features
