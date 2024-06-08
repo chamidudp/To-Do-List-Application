@@ -69,4 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
         })
             .then(response => response.json())
             .then(task => {
-                const task
+                const taskItem = createTaskElement(task);
+                taskList.appendChild(taskItem);
+                taskForm.reset();
+            });
+    });
+
+    // Fetch tasks on page load
+    fetchTasks();
+});
