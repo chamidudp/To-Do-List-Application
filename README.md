@@ -33,30 +33,13 @@ used AJAX to establish a connection with the backend.
 ![6](https://github.com/chamidudp/To-Do-List-Application/assets/84907191/09e884d3-b7a0-4ed3-bab9-7a5f4c1d0975)
 
 
-## Features
 
-### **User Authentication**
-**User Sign-Up and Log-In**  
-Enable users to create accounts and log in to manage their personal task lists securely. Includes sign-up, log-in, session management, and encrypted password storage.
-
-### **Task Sorting and Filtering**
-**Organize Tasks Efficiently**  
-Allow users to sort tasks by due date and priority, and filter tasks by status (completed or pending). Enhances task management and productivity.
-
-### **Drag-and-Drop Task Reordering**
-**Interactive Task Management**  
-Enable users to reorder tasks via drag-and-drop. Updates task order in real-time and saves the new order, providing a flexible and intuitive user experience.
-
-
-
-
-## How to Run This Project: Step-by-Step Guide
+# How to Run This Project: Step-by-Step Guide
 
 Requirements
 
-Node.js: Ensure you have Node.js installed.
-
-MySQL: Make sure you have MySQL installed and running on your machine.
+- Ensure you have Node.js installed.
+- Make sure you have MySQL installed and running on your machine.
 
 Installation and Setup
 Follow these steps to download and run the To-Do List application locally:
@@ -110,7 +93,23 @@ node server.js
 ```
 
 6. Open the Application
-Open your browser and navigate to ``` http://localhost:3000 ``` to view the application.
+Open your browser and navigate to  ``` http://localhost:3000 ```  to view the application.
+
+
+## Features
+
+### **User Authentication**
+**User Sign-Up and Log-In**  
+Enable users to create accounts and log in to manage their personal task lists securely. Includes sign-up, log-in, session management, and encrypted password storage.
+
+### **Task Sorting and Filtering**
+**Organize Tasks Efficiently**  
+Allow users to sort tasks by due date and priority, and filter tasks by status (completed or pending). Enhances task management and productivity.
+
+### **Drag-and-Drop Task Reordering**
+**Interactive Task Management**  
+Enable users to reorder tasks via drag-and-drop. Updates task order in real-time and saves the new order, providing a flexible and intuitive user experience.
+
 
 
 ## Submission: Please don't hesitate to contact me with any more queries or suggestions for additions or changes to the project!
