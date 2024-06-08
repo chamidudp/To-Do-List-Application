@@ -17,6 +17,17 @@ features to add new tasks, update current tasks, mark tasks as finished, and del
 
 used AJAX to establish a connection with the backend.
 
+![1](https://github.com/chamidudp/To-Do-List-Application/assets/84907191/070903af-89f4-46e5-bcbb-bd97e072e7df)
+
+![2](https://github.com/chamidudp/To-Do-List-Application/assets/84907191/2a3cc5a1-da49-4af3-9911-eff231f6b7cd)
+
+
+![3](https://github.com/chamidudp/To-Do-List-Application/assets/84907191/2d3b5da8-c468-4fb9-bdaf-0dfe35289718)
+
+![4](https://github.com/chamidudp/To-Do-List-Application/assets/84907191/137b6132-4c03-4152-87a7-d894f8cb3145)
+![5](https://github.com/chamidudp/To-Do-List-Application/assets/84907191/f6bd35a1-c3f9-421b-a074-7d37ce0d3554)
+![6](https://github.com/chamidudp/To-Do-List-Application/assets/84907191/09e884d3-b7a0-4ed3-bab9-7a5f4c1d0975)
+
 
 Additional bonus tasks such as authentication, sorting/filtering, and drag-and-drop were not included in the implementation.
 
