@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fetch tasks from the server
     function fetchTasks() {
-        fetch('http://localhost:3000/tasks')
+        fetch('http://localhost:3001/tasks')
             .then(response => response.json())
             .then(tasks => {
                 taskList.innerHTML = '';
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
 
         li.querySelector('.delete').addEventListener('click', () => {
-            fetch(`http://localhost:3000/tasks/${task.id}`, {
+            fetch(`http://localhost:3001/tasks/${task.id}`, {
                 method: 'DELETE',
             })
                 .then(response => response.json())
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const description = prompt('Enter new description', task.description);
             const completed = confirm('Mark as completed?');
 
-            fetch(`http://localhost:3000/tasks/${task.id}`, {
+            fetch(`http://localhost:3001/tasks/${task.id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const title = document.getElementById('title').value;
         const description = document.getElementById('description').value;
 
-        fetch('http://localhost:3000/tasks', {
+        fetch('http://localhost:3001/tasks', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

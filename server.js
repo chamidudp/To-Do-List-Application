@@ -1,52 +1,47 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const mysql = require('mysql');
 const cors = require('cors');
-const mysql = require('mysql2');
 
 const app = express();
 const port = 3001;
 
-// Middleware
-app.use(cors());
 app.use(bodyParser.json());
+app.use(cors()); // Allow cross-origin requests
+app.use(bodyParser.urlencoded({ extended: true }));
 
-// MySQL connection
 const db = mysql.createConnection({
     host: 'localhost',
-    user: 'root', // replace with your MySQL username
-    password: '0000', // replace with your MySQL password
-    database: 'todo_app'
+    user: 'root',
+    password: '0000',
+    database: 'todo_list'
 });
 
-// Connect to MySQL
-db.connect(err => {
-    if (err) {
-        console.error('Error connecting to MySQL:', err);
-        return;
-    }
-    console.log('MySQL connected...');
+db.connect((err) => {
+    if (err) throw err;
+    console.log('Connected to database');
 });
 
-// Create a new task
+// Fetch all tasks
+app.get('/tasks', (req, res) => {
+    const sql = 'SELECT * FROM tasks';
+    db.query(sql, (err, results) => {
+        if (err) throw err;
+        res.json(results);
+    });
+});
+
+// Add a new task
 app.post('/tasks', (req, res) => {
     const { title, description } = req.body;
     const sql = 'INSERT INTO tasks (title, description) VALUES (?, ?)';
     db.query(sql, [title, description], (err, result) => {
         if (err) {
-            return res.status(500).send(err);
+            console.error(err);
+            res.status(500).send({ error: 'Failed to add task' });
+        } else {
+            res.json({ id: result.insertId, title, description, completed: false });
         }
-        res.status(201).send({ id: result.insertId, title, description, completed: false });
-    });
-});
-
-// Get all tasks
-app.get('/tasks', (req, res) => {
-    const sql = 'SELECT * FROM tasks';
-    db.query(sql, (err, results) => {
-        if (err) {
-            return res.status(500).send(err);
-        }
-        res.status(200).send(results);
     });
 });
 
@@ -57,9 +52,11 @@ app.put('/tasks/:id', (req, res) => {
     const sql = 'UPDATE tasks SET title = ?, description = ?, completed = ? WHERE id = ?';
     db.query(sql, [title, description, completed, id], (err, result) => {
         if (err) {
-            return res.status(500).send(err);
+            console.error(err);
+            res.status(500).send({ error: 'Failed to update task' });
+        } else {
+            res.json({ id, title, description, completed });
         }
-        res.status(200).send({ id, title, description, completed });
     });
 });
 
@@ -69,18 +66,14 @@ app.delete('/tasks/:id', (req, res) => {
     const sql = 'DELETE FROM tasks WHERE id = ?';
     db.query(sql, [id], (err, result) => {
         if (err) {
-            return res.status(500).send(err);
+            console.error(err);
+            res.status(500).send({ error: 'Failed to delete task' });
+        } else {
+            res.json({ message: 'Task deleted successfully' });
         }
-        res.status(200).send({ id });
     });
 });
 
-// Basic route
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-});
-
-// Start server
 app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+    console.log(`Server running at http://localhost:${port}`);
 });
