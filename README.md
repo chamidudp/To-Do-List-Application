@@ -49,3 +49,72 @@ Enable users to reorder tasks via drag-and-drop. Updates task order in real-time
 
 
 ## Submission: Please don't hesitate to contact me with any more queries or suggestions for additions or changes to the project!
+
+
+## How to Run This Project: Step-by-Step Guide
+
+Requirements
+Node.js: Ensure you have Node.js installed.
+MySQL: Make sure you have MySQL installed and running on your machine.
+
+Features
+
+- Add New Tasks
+Allows users to add new tasks to their to-do list.
+
+- Edit Existing Tasks
+Enables users to edit the details of existing tasks.
+
+- Mark Tasks as Completed
+Users can mark tasks as completed to keep track of their progress.
+
+- Delete Tasks
+Provides functionality for users to delete tasks that are no longer needed.
+
+- Responsive Design
+Ensures the application is usable on various devices, including mobile phones and tablets.
+
+Installation and Setup
+Follow these steps to download and run the To-Do List application locally:
+
+1. Clone the Repository
+Open your terminal and run:
+
+git clone https://github.com/yourusername/To-Do-List-Application.git
+cd To-Do-List-Application
+
+2. Install Dependencies
+Install the required Node.js:
+npm install
+
+3. Set Up the MySQL Database
+Open MySQL and create a new database named todo_app:
+
+SQL
+CREATE DATABASE todo_app;
+USE todo_app;
+
+CREATE TABLE tasks (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    status VARCHAR(50) DEFAULT 'pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+
+4. Configure Database Connection
+Rename the .env.example file to .env and update the database configuration with your MySQL credentials:
+
+env
+
+DB_HOST=localhost
+DB_USER=yourUsername
+DB_PASSWORD=yourPassword
+DB_NAME=todo_app
+5. Run the Server
+Start the server by running:
+node server.js
+
+6. Open the Application
+Open your browser and navigate to http://localhost:3000 to view the application.
+
+
