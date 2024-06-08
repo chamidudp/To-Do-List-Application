@@ -19,7 +19,7 @@ used AJAX to establish a connection with the backend.
 
 ![1](https://github.com/chamidudp/To-Do-List-Application/assets/84907191/070903af-89f4-46e5-bcbb-bd97e072e7df)
 
-![2](https://github.com/chamidudp/To-Do-List-Application/assets/84907191/2a3cc5a1-da49-4af3-9911-eff231f6b7cd)
+
 
 
 ![3](https://github.com/chamidudp/To-Do-List-Application/assets/84907191/2d3b5da8-c468-4fb9-bdaf-0dfe35289718)
