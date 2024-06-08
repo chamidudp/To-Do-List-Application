@@ -31,9 +31,4 @@ used AJAX to establish a connection with the backend.
 
 Additional bonus tasks such as authentication, sorting/filtering, and drag-and-drop were not included in the implementation.
 
-The decision not to include additional bonus tasks such as authentication, sorting/filtering, and drag-and-drop functionalities may have been made for several reasons:
-
-Scope and Time Constraints: Implementing additional features like authentication, sorting/filtering, and drag-and-drop can significantly increase the complexity and development time of the project. Given the time constraints or scope of the task, it may have been more practical to focus on the core functionalities of the To-Do List application first.
-
-
 Submission: Please don't hesitate to contact me with any more queries or suggestions for additions or changes to the project!
