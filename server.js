@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const path = require('path');
 const cors = require('cors');
 
@@ -11,11 +11,14 @@ app.use(bodyParser.json());
 app.use(cors()); // Allow cross-origin requests
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Serve static files from "public" directory
+app.use(express.static(path.join(__dirname, 'public')));
+
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '0000',
-    database: 'todo_list'
+    database: 'todo_app'
 });
 
 db.connect((err) => {
