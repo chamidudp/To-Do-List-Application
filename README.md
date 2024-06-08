@@ -3,7 +3,7 @@ Building a To-Do List Application
 
 Backend Development:
 
-Used Express to set up a Node.js backend.
+Created a Node.js backend using Express.
 RESTful APIs were put into place to manage CRUD tasks.
 
 a MySQL database was connected to the backend to hold task data.
