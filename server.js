@@ -8,10 +8,10 @@ const app = express();
 const port = 3001;
 
 app.use(bodyParser.json());
-app.use(cors()); // Allow cross-origin requests
+app.use(cors()); 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Serve static files from "public" directory
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 const db = mysql.createConnection({
