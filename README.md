@@ -79,7 +79,7 @@ CREATE TABLE tasks (
 ```
 
 4. Configure Database Connection
-Rename the .env.example file to .env and update the database configuration with your MySQL credentials:
+Rename the .env and update the database configuration with your MySQL credentials:
 
 env
 ```
